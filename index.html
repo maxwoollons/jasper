@@ -31,10 +31,46 @@
 </div>
 
 
+<img id="cat" src="a.jpg" alt="cat"><br>
+<button onclick="update()">Update</button>
+
+
 
 
 </body>
 <script>
+    let image = document.getElementById("cat");
+    fetch('https://cataas.com/cat?json=true').then(function(response){
+        return response.json()
+    }).then(function(data){
+        console.log("https://cataas.com" + data.url)
+        image.src = "https://cataas.com" + data.url
+
+    })
+    
+    .catch(function (err) {
+	// There was an error
+	console.warn('Something went wrong.', err);
+});
+
+
+
+function update(){
+    fetch('https://cataas.com/cat?json=true').then(function(response){
+        return response.json()
+    }).then(function(data){
+        console.log("https://cataas.com" + data.url)
+        image.src = "https://cataas.com" + data.url
+
+    })
+    
+    .catch(function (err) {
+	// There was an error
+	console.warn('Something went wrong.', err);
+});
+}
+
+
     let age = document.getElementById("age")
     let d = document.getElementById("dark")
     let l = document.getElementById("light")
