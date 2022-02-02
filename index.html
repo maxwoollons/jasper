@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     
     <div id="light">
         <button onclick="dark()">Show Jasper</button>
@@ -34,11 +34,21 @@
 <img id="cat" src="a.jpg" alt="cat"><br>
 <button onclick="update()">Update</button>
 
-
-
+<br>
+<br>
+<input type="color" id="color" name="favcolor" value="#ff0000">
+<button onclick="updatec()">Update</button>
 
 </body>
 <script>
+
+    function updatec(){
+        c = document.getElementById("color").value;
+        body = document.getElementById("body")
+        body.style.backgroundColor = c 
+    }
+
+
     let image = document.getElementById("cat");
     fetch('https://cataas.com/cat?json=true').then(function(response){
         return response.json()
@@ -76,7 +86,8 @@ function update(){
     let l = document.getElementById("light")
     d.hidden = true;
 
-    
+    let colour = document.getElementById("color")
+    colour
 
     function light() {
         d.hidden = true
