@@ -18,8 +18,24 @@
         <button onclick="light()">Hide Jasper</button>
 
     </div>
+
+<div>
+    <h1>How old is jasper</h1>
+    <h3 id="age">0</h3>
+    <button onclick="one()">Age + 1</button>
+    <button onclick="five()">Age + 5</button>
+    <button onclick="ten()">Age - 5</button>
+    <button onclick="mone()">Age - 1</button>
+    <br>
+    <small>Number will not go below 0, Test me >:)</small>
+</div>
+
+
+
+
 </body>
 <script>
+    let age = document.getElementById("age")
     let d = document.getElementById("dark")
     let l = document.getElementById("light")
     d.hidden = true;
@@ -45,6 +61,35 @@
         d.hidden = false
         l.hidden = true
         console.log("make dark")
+    }
+
+    function one(){
+        age.innerHTML = parseInt(age.innerHTML) + 1
+
+    }
+    function five(){
+        age.innerHTML = parseInt(age.innerHTML) + 5
+
+    }
+    function ten(){
+        age.innerHTML = parseInt(age.innerHTML) - 5
+        if (parseInt(age.innerHTML) > -1 ){
+            return
+        }
+        else {
+            age.innerHTML = parseInt(age.innerHTML) + 5
+        }
+
+    }
+    function mone(){
+        age.innerHTML = parseInt(age.innerHTML) - 1
+        if (parseInt(age.innerHTML) > -1 ){
+            return
+        }
+        else {
+            age.innerHTML = parseInt(age.innerHTML) + 1
+        }
+
     }
     
 
