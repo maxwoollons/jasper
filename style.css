@@ -1,0 +1,15 @@
+#light {
+    background-color: white;
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+    
+
+}
+
+#dark {
+    background-image: url("https://pbs.twimg.com/media/FF5cM2wVUAAEAgs?format=jpg&name=900x900");
+    max-width: 100%;
+    height: 1000px;
+    text-align: center;
+}

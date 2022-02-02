@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="light">
+        <button onclick="dark()">Show Jasper</button>
+        
+
+    </div>
+    <div id="dark">
+        <button onclick="light()">Hide Jasper</button>
+
+    </div>
+</body>
+<script>
+    let d = document.getElementById("dark")
+    let l = document.getElementById("light")
+    d.hidden = true;
+
+    
+
+    function light() {
+        d.hidden = true
+        l.hidden = false
+        console.log("make dark")
+
+
+    }
+
+    function dark() {
+        d.hidden = false
+        l.hidden = true
+        console.log("make light")
+
+
+    }
+    function hide(){
+        d.hidden = false
+        l.hidden = true
+        console.log("make dark")
+    }
+    
+
+
+
+</script>
+</html>
