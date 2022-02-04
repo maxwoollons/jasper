@@ -112,7 +112,7 @@ li {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(0,0,0,0.9);
     width: 1000px;
     z-index: 10;
 }
