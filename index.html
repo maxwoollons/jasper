@@ -7,7 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
+<body class="body" id="body">
+    <div id="body2">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Help</li>
+            <li>Shop</li>
+        </ul>
+    </nav>
+   
     
     <div id="light">
         <button onclick="dark()">Show Jasper</button>
@@ -38,9 +47,25 @@
 <br>
 <input type="color" id="color" name="favcolor" value="#ff0000">
 <button onclick="updatec()">Update</button>
+<br>
+<button id="hack">Get hackked</button>
+<div id="backgroundColor">
+<div id="popup" class="popup">
+   
+    <div class="text-p">
+    You have a virus please install me
+    <br>
+    You cannot leave this page
+    </div>
+    <button id="close">Close</button><div><button id="Nothing">Do Nothing</button></div>
+    
 
-</body>
+</div>
+</div>
+<script type="text/javascript" src="script.js" ></script>
 <script>
+
+ 
 
     function updatec(){
         c = document.getElementById("color").value;
@@ -85,6 +110,7 @@ function update(){
     let d = document.getElementById("dark")
     let l = document.getElementById("light")
     d.hidden = true;
+    
 
     let colour = document.getElementById("color")
     colour
@@ -143,4 +169,7 @@ function update(){
 
 
 </script>
+</div>
+</body>
+
 </html>
